@@ -8,8 +8,8 @@ RUN apk update && \
 # Copy your entrypoint script to the container file path
 COPY entrypoint.sh /entrypoint.sh
 
-# # Make the script executable
-RUN chmod +x /entrypoint
+# Make the script executable
+RUN chmod +x /entrypoint.sh
 
-# Code file to execute when the docker container starts up ('entrypoint.sh')
+# Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
